@@ -1,8 +1,8 @@
-POST   http://localhost:4000/users
+POST    http://localhost:4000/posts/add
 Content-Type: application/json
 
 {
-    "username" : "joro",
-    "email": "sdds2@abv.bg",
-    "password": "123123"
+    "title" : "ssffffdfd",
+    "messagge": "asddsadas"
+    
 }

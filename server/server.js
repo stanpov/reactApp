@@ -3,7 +3,8 @@ const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 
-const router = require('./routes/router');
+const userRouter = require('./routes/user');
+const postsRouter =require('./routes/posts')
 const cors = require('cors')
 
 
@@ -13,6 +14,8 @@ mongoose.connect(process.env.DATABASE_CONNECTION,{ useUnifiedTopology: true,useN
 
 app.use(express.json({extended:false}))
 app.use(cors())
+app.use('/users',userRouter)
+app.use('/posts',postsRouter)
 
-app.use('/',router)
+
 app.listen(4000,console.log(`Server is listening on port 4000`))

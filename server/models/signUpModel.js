@@ -15,4 +15,4 @@ const signUpSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('userSignUp',signUpSchema)
+module.exports = mongoose.model('users',signUpSchema)
